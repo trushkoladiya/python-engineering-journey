@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyc
+
+# Virtual environments
+venv/
+env/
+.venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Temp files created by code examples
+_demo_*
+_app_config.json
+_test_venv/
+_demo_workspace/
+
+# Logs
+*.log
+
+# Byte-compiled
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Planning notes (not for GitHub)
+docs/
