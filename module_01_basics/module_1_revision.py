@@ -119,5 +119,7 @@ print ( 5 + 4.0 ) # int + float = float
 # file name - which file have error (for large number of files)
 # fix one error at a time (sometimes one fix fixes all errors)
 # error reading from bottom to up...
+# only reading is not enough, hands on practice gives experience and this is only for quick theory revision not for practice revision.
+# solve problems and practice python everyday for better learning and gaining real experience.
 
 # --------- end ---------
