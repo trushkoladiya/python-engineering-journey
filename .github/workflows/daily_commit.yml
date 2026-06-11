@@ -1,0 +1,35 @@
+name: Daily Course Commits
+
+on:
+  schedule:
+    # Runs every day at 07:00 UTC (12:30 PM IST)
+    - cron: '0 7 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions UI
+
+jobs:
+  commit-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Crucial permission to allow pushing back to the main branch
+
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0 # Fetches history for all branches and tags
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Wait for random delay (to look organic)
+        # Sleep for a random time between 0 and 60 minutes (0 to 3600 seconds)
+        run: |
+          DELAY_MINUTES=$((RANDOM % 60))
+          echo "Waiting for $DELAY_MINUTES minutes before running script..."
+          sleep $((DELAY_MINUTES * 60))
+
+      - name: Run Auto Committer Script
+        run: python automate_commits.py
